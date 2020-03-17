@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "top.fighter_lee.easymqtt"
+        applicationId "org.eclipse.easymqtt"
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
