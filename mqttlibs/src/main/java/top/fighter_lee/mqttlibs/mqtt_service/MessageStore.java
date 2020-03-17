@@ -15,7 +15,7 @@ package top.fighter_lee.mqttlibs.mqtt_service;
 
 import java.util.Iterator;
 
-import top.fighter_lee.mqttlibs.mqttv3.MqttMessage;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 /**
  * <p>

@@ -24,7 +24,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.Iterator;
 
-import top.fighter_lee.mqttlibs.mqttv3.MqttMessage;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 /**
  * Implementation of the {@link MessageStore} interface, using a SQLite database

@@ -4,15 +4,18 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
 
+import org.eclipse.paho.client.mqttv3.IMqttActionListener;
+import org.eclipse.paho.client.mqttv3.MqttCallback;
+
 import java.io.InputStream;
 
 import top.fighter_lee.mqttlibs.mqtt_service.MqttAndroidClient;
 import top.fighter_lee.mqttlibs.mqtt_service.MqttTraceHandler;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttActionListener;
-import top.fighter_lee.mqttlibs.mqttv3.MqttCallback;
-import top.fighter_lee.mqttlibs.mqttv3.MqttConnectOptions;
-import top.fighter_lee.mqttlibs.mqttv3.MqttException;
-import top.fighter_lee.mqttlibs.mqttv3.MqttSecurityException;
+import org.eclipse.paho.client.mqttv3.IMqttActionListener;
+import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttSecurityException;
 
 /**
  * Created by fighter_lee on 2017/6/30.

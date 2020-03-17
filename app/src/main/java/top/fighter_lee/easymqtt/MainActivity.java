@@ -6,12 +6,13 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
+
 import top.fighter_lee.easymqtt.engine.MqttEngine;
 import top.fighter_lee.mqttlibs.connect.MqttManager;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttDeliveryToken;
-import top.fighter_lee.mqttlibs.mqttv3.MqttCallback;
-import top.fighter_lee.mqttlibs.mqttv3.MqttException;
-import top.fighter_lee.mqttlibs.mqttv3.MqttMessage;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";

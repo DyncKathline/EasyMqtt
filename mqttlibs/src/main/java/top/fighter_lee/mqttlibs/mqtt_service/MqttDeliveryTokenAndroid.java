@@ -13,10 +13,10 @@
 package top.fighter_lee.mqttlibs.mqtt_service;
 
 
-import top.fighter_lee.mqttlibs.mqttv3.IMqttActionListener;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttDeliveryToken;
-import top.fighter_lee.mqttlibs.mqttv3.MqttException;
-import top.fighter_lee.mqttlibs.mqttv3.MqttMessage;
+import org.eclipse.paho.client.mqttv3.IMqttActionListener;
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 /**
  * <p>
@@ -36,7 +36,7 @@ class MqttDeliveryTokenAndroid extends MqttTokenAndroid
 	}
 
 	/**
-	 * @see top.fighter_lee.mqttlibs.mqttv3.IMqttDeliveryToken#getMessage()
+	 * @see org.eclipse.paho.client.mqttv3.IMqttDeliveryToken#getMessage()
 	 */
 	@Override
 	public MqttMessage getMessage() throws MqttException {

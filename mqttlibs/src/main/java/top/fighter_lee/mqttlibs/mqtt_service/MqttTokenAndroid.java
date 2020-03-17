@@ -13,12 +13,12 @@
 package top.fighter_lee.mqttlibs.mqtt_service;
 
 
-import top.fighter_lee.mqttlibs.mqttv3.IMqttActionListener;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttAsyncClient;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttToken;
-import top.fighter_lee.mqttlibs.mqttv3.MqttException;
-import top.fighter_lee.mqttlibs.mqttv3.MqttSecurityException;
-import top.fighter_lee.mqttlibs.mqttv3.internal.wire.MqttWireMessage;
+import org.eclipse.paho.client.mqttv3.IMqttActionListener;
+import org.eclipse.paho.client.mqttv3.IMqttAsyncClient;
+import org.eclipse.paho.client.mqttv3.IMqttToken;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttSecurityException;
+import org.eclipse.paho.client.mqttv3.internal.wire.MqttWireMessage;
 
 /**
  * <p>
@@ -75,7 +75,7 @@ class MqttTokenAndroid implements IMqttToken {
   }
 
   /**
-   * @see top.fighter_lee.mqttlibs.mqttv3.IMqttToken#waitForCompletion()
+   * @see org.eclipse.paho.client.mqttv3.IMqttToken#waitForCompletion()
    */
   @Override
   public void waitForCompletion() throws MqttException, MqttSecurityException {
@@ -93,7 +93,7 @@ class MqttTokenAndroid implements IMqttToken {
   }
 
   /**
-   * @see top.fighter_lee.mqttlibs.mqttv3.IMqttToken#waitForCompletion(long)
+   * @see org.eclipse.paho.client.mqttv3.IMqttToken#waitForCompletion(long)
    */
   @Override
   public void waitForCompletion(long timeout) throws MqttException,
@@ -151,7 +151,7 @@ class MqttTokenAndroid implements IMqttToken {
   }
 
   /**
-   * @see top.fighter_lee.mqttlibs.mqttv3.IMqttToken#isComplete()
+   * @see org.eclipse.paho.client.mqttv3.IMqttToken#isComplete()
    */
   @Override
   public boolean isComplete() {
@@ -163,7 +163,7 @@ class MqttTokenAndroid implements IMqttToken {
   }
 
   /**
-   * @see top.fighter_lee.mqttlibs.mqttv3.IMqttToken#getException()
+   * @see org.eclipse.paho.client.mqttv3.IMqttToken#getException()
    */
   @Override
   public MqttException getException() {
@@ -175,7 +175,7 @@ class MqttTokenAndroid implements IMqttToken {
   }
 
   /**
-   * @see top.fighter_lee.mqttlibs.mqttv3.IMqttToken#getClient()
+   * @see org.eclipse.paho.client.mqttv3.IMqttToken#getClient()
    */
   @Override
   public IMqttAsyncClient getClient() {
@@ -183,7 +183,7 @@ class MqttTokenAndroid implements IMqttToken {
   }
 
   /**
-   * @see top.fighter_lee.mqttlibs.mqttv3.IMqttToken#setActionCallback(IMqttActionListener)
+   * @see org.eclipse.paho.client.mqttv3.IMqttToken#setActionCallback(IMqttActionListener)
    */
   @Override
   public void setActionCallback(IMqttActionListener listener) {
@@ -191,7 +191,7 @@ class MqttTokenAndroid implements IMqttToken {
   }
 
   /**
-   * @see top.fighter_lee.mqttlibs.mqttv3.IMqttToken#getActionCallback()
+   * @see org.eclipse.paho.client.mqttv3.IMqttToken#getActionCallback()
    */
   @Override
   public IMqttActionListener getActionCallback() {
@@ -199,7 +199,7 @@ class MqttTokenAndroid implements IMqttToken {
   }
 
   /**
-   * @see top.fighter_lee.mqttlibs.mqttv3.IMqttToken#getTopics()
+   * @see org.eclipse.paho.client.mqttv3.IMqttToken#getTopics()
    */
   @Override
   public String[] getTopics() {
@@ -207,7 +207,7 @@ class MqttTokenAndroid implements IMqttToken {
   }
 
   /**
-   * @see top.fighter_lee.mqttlibs.mqttv3.IMqttToken#setUserContext(Object)
+   * @see org.eclipse.paho.client.mqttv3.IMqttToken#setUserContext(Object)
    */
   @Override
   public void setUserContext(Object userContext) {
@@ -216,7 +216,7 @@ class MqttTokenAndroid implements IMqttToken {
   }
 
   /**
-   * @see top.fighter_lee.mqttlibs.mqttv3.IMqttToken#getUserContext()
+   * @see org.eclipse.paho.client.mqttv3.IMqttToken#getUserContext()
    */
   @Override
   public Object getUserContext() {
@@ -228,7 +228,7 @@ class MqttTokenAndroid implements IMqttToken {
   }
 
   /**
-   * @see top.fighter_lee.mqttlibs.mqttv3.IMqttToken#getMessageId()
+   * @see org.eclipse.paho.client.mqttv3.IMqttToken#getMessageId()
    */
   @Override
   public int getMessageId() {

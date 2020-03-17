@@ -19,25 +19,27 @@ import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
 import android.util.Log;
 
+import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
+
 import java.io.File;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import top.fighter_lee.mqttlibs.mqttv3.DisconnectedBufferOptions;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttActionListener;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttDeliveryToken;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttMessageListener;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttToken;
-import top.fighter_lee.mqttlibs.mqttv3.MqttAsyncClient;
-import top.fighter_lee.mqttlibs.mqttv3.MqttCallbackExtended;
-import top.fighter_lee.mqttlibs.mqttv3.MqttClientPersistence;
-import top.fighter_lee.mqttlibs.mqttv3.MqttConnectOptions;
-import top.fighter_lee.mqttlibs.mqttv3.MqttException;
-import top.fighter_lee.mqttlibs.mqttv3.MqttMessage;
-import top.fighter_lee.mqttlibs.mqttv3.MqttPersistenceException;
-import top.fighter_lee.mqttlibs.mqttv3.persist.MqttDefaultFilePersistence;
+import org.eclipse.paho.client.mqttv3.DisconnectedBufferOptions;
+import org.eclipse.paho.client.mqttv3.IMqttActionListener;
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.IMqttMessageListener;
+import org.eclipse.paho.client.mqttv3.IMqttToken;
+import org.eclipse.paho.client.mqttv3.MqttAsyncClient;
+import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
+import org.eclipse.paho.client.mqttv3.MqttClientPersistence;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.eclipse.paho.client.mqttv3.MqttPersistenceException;
+import org.eclipse.paho.client.mqttv3.persist.MqttDefaultFilePersistence;
 
 /**
  * <p>

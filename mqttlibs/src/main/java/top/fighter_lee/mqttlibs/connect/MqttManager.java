@@ -3,10 +3,11 @@ package top.fighter_lee.mqttlibs.connect;
 import android.content.Context;
 import android.util.Log;
 
+import org.eclipse.paho.client.mqttv3.IMqttActionListener;
+import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.MqttException;
+
 import top.fighter_lee.mqttlibs.mqtt_service.MqttTraceHandler;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttActionListener;
-import top.fighter_lee.mqttlibs.mqttv3.MqttCallback;
-import top.fighter_lee.mqttlibs.mqttv3.MqttException;
 
 
 /**
@@ -45,7 +46,7 @@ public class MqttManager {
         sCx = context;
     }
 
-    public void connect(ConnectCommand connect,IMqttActionListener listener) throws MqttException {
+    public void connect(ConnectCommand connect, IMqttActionListener listener) throws MqttException {
         if (null != messageListener) {
             connect.setMessageListener(messageListener);
         }

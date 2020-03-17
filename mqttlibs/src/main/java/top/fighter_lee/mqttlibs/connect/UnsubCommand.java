@@ -1,8 +1,8 @@
 package top.fighter_lee.mqttlibs.connect;
 
 
-import top.fighter_lee.mqttlibs.mqttv3.IMqttActionListener;
-import top.fighter_lee.mqttlibs.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.IMqttActionListener;
+import org.eclipse.paho.client.mqttv3.MqttException;
 
 /**
  * Created by fighter_lee on 2017/7/2.

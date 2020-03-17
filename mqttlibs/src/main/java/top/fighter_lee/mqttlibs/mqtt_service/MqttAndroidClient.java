@@ -43,21 +43,21 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 
-import top.fighter_lee.mqttlibs.mqttv3.DisconnectedBufferOptions;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttActionListener;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttAsyncClient;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttDeliveryToken;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttMessageListener;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttToken;
-import top.fighter_lee.mqttlibs.mqttv3.MqttCallback;
-import top.fighter_lee.mqttlibs.mqttv3.MqttCallbackExtended;
-import top.fighter_lee.mqttlibs.mqttv3.MqttClientPersistence;
-import top.fighter_lee.mqttlibs.mqttv3.MqttConnectOptions;
-import top.fighter_lee.mqttlibs.mqttv3.MqttException;
-import top.fighter_lee.mqttlibs.mqttv3.MqttMessage;
-import top.fighter_lee.mqttlibs.mqttv3.MqttPersistenceException;
-import top.fighter_lee.mqttlibs.mqttv3.MqttSecurityException;
-import top.fighter_lee.mqttlibs.mqttv3.MqttToken;
+import org.eclipse.paho.client.mqttv3.DisconnectedBufferOptions;
+import org.eclipse.paho.client.mqttv3.IMqttActionListener;
+import org.eclipse.paho.client.mqttv3.IMqttAsyncClient;
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.IMqttMessageListener;
+import org.eclipse.paho.client.mqttv3.IMqttToken;
+import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
+import org.eclipse.paho.client.mqttv3.MqttClientPersistence;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.eclipse.paho.client.mqttv3.MqttPersistenceException;
+import org.eclipse.paho.client.mqttv3.MqttSecurityException;
+import org.eclipse.paho.client.mqttv3.MqttToken;
 
 /**
  * Enables an android application to communicate with an MQTT server using non-blocking methods.

@@ -15,7 +15,7 @@ package top.fighter_lee.mqttlibs.mqtt_service;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import top.fighter_lee.mqttlibs.mqttv3.MqttMessage;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 
 /**

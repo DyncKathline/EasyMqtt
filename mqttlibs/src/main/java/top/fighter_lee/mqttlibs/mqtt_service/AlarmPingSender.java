@@ -25,10 +25,10 @@ import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
 import android.util.Log;
 
-import top.fighter_lee.mqttlibs.mqttv3.IMqttActionListener;
-import top.fighter_lee.mqttlibs.mqttv3.IMqttToken;
-import top.fighter_lee.mqttlibs.mqttv3.MqttPingSender;
-import top.fighter_lee.mqttlibs.mqttv3.internal.ClientComms;
+import org.eclipse.paho.client.mqttv3.IMqttActionListener;
+import org.eclipse.paho.client.mqttv3.IMqttToken;
+import org.eclipse.paho.client.mqttv3.MqttPingSender;
+import org.eclipse.paho.client.mqttv3.internal.ClientComms;
 
 import java.text.SimpleDateFormat;
 
