@@ -1,8 +1,7 @@
 package top.fighter_lee.mqttlibs.connect;
 
 import android.content.Context;
-
-import com.adups.trace.Trace;
+import android.util.Log;
 
 import top.fighter_lee.mqttlibs.mqtt_service.MqttTraceHandler;
 import top.fighter_lee.mqttlibs.mqttv3.IMqttActionListener;
@@ -144,7 +143,7 @@ public class MqttManager {
 
     public void stopKeepConnect() {
         if (isKeepConnect()){
-            Trace.d(TAG, "stopKeepConnect() will stop keep-connect-service");
+            Log.d(TAG, "stopKeepConnect() will stop keep-connect-service");
             getConnect().getClient().stopKeepConnect();
 
         }

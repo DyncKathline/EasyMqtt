@@ -1,10 +1,10 @@
 package top.fighter_lee.easymqtt;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
-import com.adups.trace.Trace;
+import androidx.appcompat.app.AppCompatActivity;
 
 import top.fighter_lee.easymqtt.engine.MqttEngine;
 import top.fighter_lee.mqttlibs.connect.MqttManager;
@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
         MqttManager.getInstance().registerMessageListener(new MqttCallback() {
             @Override
             public void connectionLost(Throwable cause) {
-                Trace.e(TAG, cause);
+                Log.e(TAG, String.valueOf(cause));
             }
 
             @Override
             public void messageArrived(String topic, MqttMessage message) throws Exception {
-                Trace.d(TAG, "messageArrived() topic:"+topic);
-                Trace.d(TAG, "messageArrived() message:"+message);
+                Log.d(TAG, "messageArrived() topic:"+topic);
+                Log.d(TAG, "messageArrived() message:"+message);
             }
 
             @Override

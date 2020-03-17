@@ -30,9 +30,9 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
-import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 
-import com.adups.trace.Trace;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import java.text.SimpleDateFormat;
 import java.util.Map;
@@ -635,7 +635,7 @@ public class MqttService extends Service implements MqttTraceHandler {
      * @return
      */
     public AlarmManager startKeepConnect(long repeatTime, long triggerTime) {
-        Trace.d(TAG, "startKeepConnect() repeat time:" + ((repeatTime + 0f) / 1000 / 60) + "min,next time:" + getFormateTime(triggerTime));
+        Log.d(TAG, "startKeepConnect() repeat time:" + ((repeatTime + 0f) / 1000 / 60) + "min,next time:" + getFormateTime(triggerTime));
         operation = PendingIntent.getBroadcast(MqttService.this, 0, new Intent(ACTION_ALARM_KEEP_CONNECT), PendingIntent.FLAG_CANCEL_CURRENT);
         mAm = (AlarmManager) MqttService.this.getSystemService(Context.ALARM_SERVICE);
         //        stopKeepConnect();
@@ -945,9 +945,9 @@ public class MqttService extends Service implements MqttTraceHandler {
         public void onReceive(Context context, Intent intent) {
             switch (intent.getAction()) {
                 case ACTION_ALARM_KEEP_CONNECT:
-                    Trace.d(TAG, "onReceive() receive alarm_connect_engine's message");
+                    Log.d(TAG, "onReceive() receive alarm_connect_engine's message");
                     if (MqttManager.getInstance().isConneect()) {
-                        Trace.d(TAG, "onReceive() socket have connected");
+                        Log.d(TAG, "onReceive() socket have connected");
                         stopKeepConnect();
                         return;
                     }
@@ -957,10 +957,10 @@ public class MqttService extends Service implements MqttTraceHandler {
                         }
                     }
                     if (NetUtils.isNetWorkAvailable()) {
-                        Trace.d(TAG, "onReceive() try to reconnect");
+                        Log.d(TAG, "onReceive() try to reconnect");
                         reconnect();
                     } else {
-                        Trace.d(TAG, "onReceive() The current network is not available");
+                        Log.d(TAG, "onReceive() The current network is not available");
                     }
                     break;
             }

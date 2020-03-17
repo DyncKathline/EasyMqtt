@@ -4,8 +4,6 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.adups.trace.Trace;
-
 import java.io.InputStream;
 
 import top.fighter_lee.mqttlibs.mqtt_service.MqttAndroidClient;
@@ -231,7 +229,7 @@ public class ConnectCommand implements Command {
             try {
                 conOpt.setWill(lastWillTopic, lastWillMsg.getBytes(), lastWillQos, lastWillRetained);
             } catch (Exception e) {
-                Trace.d(TAG, "connect() Exception Occured：" + e.toString());
+                Log.d(TAG, "connect() Exception Occured：" + e.toString());
                 doConnect = false;
             }
         }
@@ -246,7 +244,7 @@ public class ConnectCommand implements Command {
             try {
                 client.connect(conOpt, null, listener);
             } catch (MqttException e) {
-                Trace.d(TAG, "connect() MqttException Occured:" + e.toString());
+                Log.d(TAG, "connect() MqttException Occured:" + e.toString());
             }
         }
     }

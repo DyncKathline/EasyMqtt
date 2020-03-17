@@ -24,8 +24,9 @@ import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.SparseArray;
+
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -56,6 +57,7 @@ import top.fighter_lee.mqttlibs.mqttv3.MqttException;
 import top.fighter_lee.mqttlibs.mqttv3.MqttMessage;
 import top.fighter_lee.mqttlibs.mqttv3.MqttPersistenceException;
 import top.fighter_lee.mqttlibs.mqttv3.MqttSecurityException;
+import top.fighter_lee.mqttlibs.mqttv3.MqttToken;
 
 /**
  * Enables an android application to communicate with an MQTT server using non-blocking methods.

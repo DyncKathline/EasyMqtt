@@ -2,8 +2,7 @@ package top.fighter_lee.easymqtt.engine;
 
 import android.os.Build;
 import android.text.TextUtils;
-
-import com.adups.trace.Trace;
+import android.util.Log;
 
 import top.fighter_lee.mqttlibs.connect.ConnectCommand;
 import top.fighter_lee.mqttlibs.connect.DisconnectCommand;
@@ -46,13 +45,13 @@ public class MqttEngine {
                         , new IMqttActionListener() {
                             @Override
                             public void onSuccess(IMqttToken asyncActionToken) {
-                                Trace.d(TAG, "onSuccess() ");
+                                Log.d(TAG, "onSuccess() ");
                             }
 
                             @Override
                             public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                                Trace.d(TAG, "onFailure() ");
-                                Trace.e(TAG, exception);
+                                Log.d(TAG, "onFailure() ");
+                                Log.e(TAG, String.valueOf(exception));
                             }
                         });
     }
@@ -62,12 +61,12 @@ public class MqttEngine {
                 .setQuiesceTimeout(10), new IMqttActionListener() {
             @Override
             public void onSuccess(IMqttToken asyncActionToken) {
-                Trace.d(TAG, "onSuccess() ");
+                Log.d(TAG, "onSuccess() ");
             }
 
             @Override
             public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                Trace.e(TAG, exception);
+                Log.e(TAG, String.valueOf(exception));
             }
         });
     }
@@ -80,12 +79,12 @@ public class MqttEngine {
                 .setRetained(false), new IMqttActionListener() {
             @Override
             public void onSuccess(IMqttToken asyncActionToken) {
-                Trace.d(TAG, "onSuccess() ");
+                Log.d(TAG, "onSuccess() ");
             }
 
             @Override
             public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                Trace.e(TAG, exception);
+                Log.e(TAG, String.valueOf(exception));
             }
         });
     }
@@ -96,12 +95,12 @@ public class MqttEngine {
                 .setTopic("/fighter-lee.top/mqttlibs"), new IMqttActionListener() {
             @Override
             public void onSuccess(IMqttToken asyncActionToken) {
-                Trace.d(TAG, "onSuccess() ");
+                Log.d(TAG, "onSuccess() ");
             }
 
             @Override
             public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                Trace.e(TAG, exception);
+                Log.e(TAG, String.valueOf(exception));
             }
         });
     }
@@ -111,18 +110,18 @@ public class MqttEngine {
                 .setTopic("/fighter-lee.top/mqttlibs"), new IMqttActionListener() {
             @Override
             public void onSuccess(IMqttToken asyncActionToken) {
-                Trace.d(TAG, "onSuccess() ");
+                Log.d(TAG, "onSuccess() ");
             }
 
             @Override
             public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                Trace.e(TAG, exception);
+                Log.e(TAG, String.valueOf(exception));
             }
         });
     }
 
     private String getClientId() {
-        Trace.d(TAG, "getClientId() " + Build.SERIAL);
+        Log.d(TAG, "getClientId() " + Build.SERIAL);
         String clientId = Build.SERIAL;
         if (TextUtils.isEmpty(clientId)) {
             clientId = "222222";
