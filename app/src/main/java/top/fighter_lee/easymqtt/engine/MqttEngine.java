@@ -37,9 +37,9 @@ public class MqttEngine {
         MqttManager.getInstance()
                 .connect(new ConnectCommand()
                                 .setClientId(getClientId())
-                                .setServer("172.17.3.35")
-                                .setPort(61613)
-                                .setUserNameAndPassword("admin", "password")
+                                .setServer("192.168.43.190")
+                                .setPort(1883)
+//                                .setUserNameAndPassword("admin", "password")
                                 .setKeepAlive(30)
                                 .setTimeout(10)
                                 .setCleanSession(false)
@@ -76,7 +76,7 @@ public class MqttEngine {
         MqttManager.getInstance().pub(new PubCommand()
                 .setMessage("哈哈哈，我来了")
                 .setQos(1)
-                .setTopic("/fighter-lee.top/mqttlibs")
+                .setTopic("test")
                 .setRetained(false), new IMqttActionListener() {
             @Override
             public void onSuccess(IMqttToken asyncActionToken) {
@@ -93,7 +93,7 @@ public class MqttEngine {
     public void sub() throws MqttException {
         MqttManager.getInstance().sub(new SubCommand()
                 .setQos(1)
-                .setTopic("/fighter-lee.top/mqttlibs"), new IMqttActionListener() {
+                .setTopic("test"), new IMqttActionListener() {
             @Override
             public void onSuccess(IMqttToken asyncActionToken) {
                 Log.d(TAG, "onSuccess() ");
